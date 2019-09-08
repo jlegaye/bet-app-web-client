@@ -7,7 +7,7 @@ import { environment } from './../environments/environment';
 })
 export class ProductsService {
 
-  uri = environment.apiUrl + 'products';
+  uri = environment.apiUrl + '/products';
 
   constructor(private http: HttpClient) { }
 

@@ -12,13 +12,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ProductsService } from './products.service';
+import { EventsService } from './events.service';
+import { DatabaseToolsComponent } from './database-tools/database-tools.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductAddComponent,
     ProductGetComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    DatabaseToolsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,7 @@ import { ProductsService } from './products.service';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ProductsService],
+  providers: [ProductsService, EventsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
